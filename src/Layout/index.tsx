@@ -1,4 +1,4 @@
-import { SequenceAlignmentViewer } from "../pages/ComparableAminoAcids/";
+import { SequenceAlignmentViewer } from "@pages/ComparableAminoAcids/";
 import s from "./Layout.module.scss";
 
 export const Layout = () => {
