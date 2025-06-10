@@ -6,7 +6,8 @@
       "@styles/*": ["styles/*"],
       "@pages/*": ["pages/*"],
       "@assets/*": ["assets/*"],
-      "@layout/*": ["layout/*"]
+      "@layout/*": ["layout/*"],
+      "@utils/*": ["utils/*"]
     },
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
     "target": "ES2020",
