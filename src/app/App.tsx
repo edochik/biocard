@@ -1,9 +1,9 @@
-import { Layout } from "@layout/index.tsx";
+import { SequenceAlignmentViewer } from "@components/ComparableAminoAcids/";
 
 function App() {
   return (
     <>
-      <Layout />
+      <SequenceAlignmentViewer />
     </>
   );
 }

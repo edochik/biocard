@@ -3,6 +3,7 @@ import { Button, TextInput } from "@mantine/core";
 import s from "./Form.module.scss";
 interface Props {
   onChange: (data: FormData) => void;
+  onClear: () => void;
 }
 
 export interface FormData {
@@ -10,12 +11,13 @@ export interface FormData {
   sequence2: string;
 }
 
-export const Form = ({ onChange }: Props) => {
+export const Form = ({ onChange, onClear }: Props) => {
   const {
     register,
     handleSubmit,
     setError,
     formState: { errors },
+    reset,
   } = useForm<FormData>({
     mode: "onChange",
   });
@@ -62,7 +64,18 @@ export const Form = ({ onChange }: Props) => {
         mb="sm"
         onInput={handleInputValidateLetter}
       />
-      <Button type="submit">Проверить</Button>
+      <Button type="submit" mr="sm">
+        Проверить
+      </Button>
+      <Button
+        type="button"
+        onClick={() => {
+          onClear();
+          reset();
+        }}
+      >
+        Очистить
+      </Button>
     </form>
   );
 };
